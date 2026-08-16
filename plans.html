@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Planos - Mércure Elo</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Hanken+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "outline-variant": "#bfc9c1",
+                "on-secondary": "#ffffff",
+                "primary-fixed-dim": "#95d4b3",
+                "tertiary-fixed-dim": "#b3cdb7",
+                "surface-container-low": "#d1fee5",
+                "surface-tint": "#2c694e",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#00734d",
+                "on-primary-container": "#a8e7c5",
+                "inverse-surface": "#0e3727",
+                "action-emerald": "#40916c",
+                "soft-mint": "#b7e4c7",
+                "secondary": "#006c48",
+                "surface-bright": "#e8fff0",
+                "on-tertiary-container": "#c6e1ca",
+                "on-error": "#ffffff",
+                "tertiary-container": "#4d6553",
+                "on-tertiary-fixed": "#092012",
+                "surface-container": "#ccf8df",
+                "deep-forest": "#081c15",
+                "pure-white": "#ffffff",
+                "secondary-fixed-dim": "#75daa8",
+                "on-secondary-fixed": "#002113",
+                "background": "#e8fff0",
+                "tertiary-fixed": "#cee9d3",
+                "on-surface": "#002114",
+                "on-background": "#002114",
+                "on-error-container": "#93000a",
+                "surface-container-high": "#c6f2da",
+                "error": "#ba1a1a",
+                "primary-fixed": "#b1f0ce",
+                "on-tertiary-fixed-variant": "#354c3b",
+                "on-primary-fixed": "#002114",
+                "on-secondary-fixed-variant": "#005235",
+                "surface-container-highest": "#c1ecd4",
+                "primary": "#0f5238",
+                "primary-container": "#2d6a4f",
+                "surface-container-lowest": "#ffffff",
+                "error-container": "#ffdad6",
+                "inverse-primary": "#95d4b3",
+                "surface": "#e8fff0",
+                "surface-variant": "#c1ecd4",
+                "tertiary": "#364d3c",
+                "secondary-container": "#92f7c3",
+                "inverse-on-surface": "#cffbe2",
+                "on-primary": "#ffffff",
+                "secondary-fixed": "#92f7c3",
+                "surface-dim": "#b8e4cc",
+                "outline": "#707973",
+                "on-primary-fixed-variant": "#0e5138",
+                "on-surface-variant": "#404943"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem",
+                "2xl": "1rem"
+        },
+        "spacing": {
+                "overlap-md": "-32px",
+                "unit": "8px",
+                "margin-desktop": "80px",
+                "section-gap": "120px",
+                "overlap-sm": "-16px",
+                "gutter": "32px",
+                "xs": "4px",
+                "sm": "8px",
+                "md": "16px",
+                "lg": "24px",
+                "xl": "40px",
+                "xxl": "64px",
+                "container-max": "1280px"
+        },
+        "fontFamily": {
+                "label-md": [
+                        "Hanken Grotesk"
+                ],
+                "label-lg": [
+                        "Hanken Grotesk"
+                ],
+                "body-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-xl-mobile": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-xl": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-md": [
+                        "Hanken Grotesk"
+                ]
+        },
+        "fontSize": {
+                "label-md": [
+                        "12px",
+                        {
+                                "lineHeight": "14px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-lg": [
+                        "14px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.08em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-xl-mobile": [
+                        "36px",
+                        {
+                                "lineHeight": "44px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        .material-symbols-outlined {
+          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .transition-all {
+            transition-property: all;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+            transition-duration: 300ms;
+        }
+
+        .bg-geometric {
+            background-image: radial-gradient(circle at 10% 20%, rgba(255,255,255,0.05) 0%, transparent 20%),
+                              radial-gradient(circle at 90% 80%, rgba(255,255,255,0.05) 0%, transparent 20%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface/90 backdrop-blur-md docked full-width top-0 sticky z-50 border-b border-outline-variant/30 shadow-sm">
+<div class="flex justify-between items-center px-lg md:px-xl py-md max-w-container-max mx-auto">
+<div class="flex items-center gap-sm">
+<img alt="Mércure Elo Logo" class="h-8 w-8 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvCU1aqS0lmpLReh9Jum2wrh4Wn2ndKQMQa8xtRelSk3LehVh6D8lDxLsBwU1MYp3hxxYQXU4aEdWeuG-mJr-66m5e51qRkjvu3v4V2XekrkiV7XqG1mJRXo1VeofFLhBiBukBm23S1RlGnmsdOv_lgTfOcpI4yAzY32TiDVOe8XVUBYtKzDgZ2UHXOmReX2L41PRPfGN6i_2bXF7ZR9-CNQeK35Xznse56dcCeth55bYEaJXG0NzLqHcCGvx3RPdg"/>
+<span class="font-headline-md text-headline-md font-bold text-primary">Mércure Elo</span>
+</div>
+<nav class="hidden md:flex gap-lg items-center">
+<a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors duration-200 px-3 py-2 rounded-lg font-label-md text-label-md" href="#">Funcionalidades</a>
+<!-- Active State -->
+<a class="text-primary font-bold border-b-2 border-primary hover:bg-primary/5 transition-colors duration-200 px-3 py-2 font-label-md text-label-md" href="#">Planos</a>
+<a class="text-on-surface-variant hover:text-primary hover:bg-primary/5 transition-colors duration-200 px-3 py-2 rounded-lg font-label-md text-label-md" href="#">Clientes</a>
+</nav>
+<div class="flex items-center gap-sm">
+<button class="bg-action-emerald text-white hover:bg-primary active:scale-95 transition-all px-4 py-2 rounded-lg font-label-md text-label-md shadow-sm">
+                    Entrar
+                </button>
+</div>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative bg-primary text-pure-white px-gutter pt-section-gap pb-[160px] text-center overflow-hidden bg-geometric">
+<div class="absolute top-[-50px] left-[-50px] w-64 h-64 bg-action-emerald rounded-full opacity-20 blur-3xl"></div>
+<div class="absolute bottom-[-50px] right-[-50px] w-96 h-96 bg-soft-mint rounded-full opacity-10 blur-3xl"></div>
+<div class="max-w-container-max mx-auto relative z-10">
+<h1 class="font-headline-xl text-5xl md:text-[64px] font-extrabold leading-tight mb-md">Planos que crescem com o seu negócio</h1>
+<p class="font-body-lg text-xl text-soft-mint max-w-2xl mx-auto">
+                Automação amigável e profissional para artesãos e pequenas empresas. Escolha o plano ideal para se conectar com seus clientes sem complicação.
+            </p>
+</div>
+</section>
+<!-- Pricing Cards -->
+<section class="px-gutter pb-xxl max-w-container-max mx-auto relative z-20 -mt-[100px]">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg items-center">
+<!-- Plano Artesão -->
+<div class="bg-surface-container-lowest rounded-2xl p-xl shadow-xl hover:shadow-2xl transition-all flex flex-col border-4 border-outline-variant/30 hover:border-action-emerald/50">
+<div class="mb-md">
+<div class="flex items-center gap-sm mb-sm">
+<span class="material-symbols-outlined text-action-emerald text-3xl" data-icon="yard">yard</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Artesão</h2>
+</div>
+<p class="font-body-md text-on-surface-variant mb-md h-12">Para quem está começando a organizar seus contatos.</p>
+<div class="flex items-baseline gap-xs mb-sm">
+<span class="font-headline-xl text-[56px] font-extrabold text-on-surface">R$ 29</span>
+<span class="font-body-md text-on-surface-variant font-bold">/mês</span>
+</div>
+</div>
+<div class="flex-grow mb-xl mt-md">
+<ul class="space-y-md">
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-action-emerald" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface font-semibold">Até 500 envios/mês</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-action-emerald" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface">QR Code simples</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-action-emerald" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface">Suporte via email</span>
+</li>
+</ul>
+</div>
+<button class="w-full border-4 border-action-emerald text-action-emerald hover:bg-action-emerald hover:text-white active:scale-95 transition-all py-4 rounded-xl font-label-lg text-label-lg font-bold uppercase tracking-wider">
+                        Começar Grátis
+                    </button>
+</div>
+<!-- Plano Crescimento (Popular) -->
+<div class="bg-deep-forest text-pure-white rounded-2xl p-xl shadow-2xl transform md:scale-105 z-10 flex flex-col border-4 border-action-emerald relative">
+<div class="absolute -top-5 left-1/2 transform -translate-x-1/2 bg-action-emerald text-white px-6 py-2 rounded-full font-label-lg text-label-lg font-bold shadow-lg uppercase tracking-wider">
+                        Mais Popular
+                    </div>
+<div class="mb-md mt-sm">
+<div class="flex items-center gap-sm mb-sm">
+<span class="material-symbols-outlined text-soft-mint text-3xl" data-icon="trending_up">trending_up</span>
+<h2 class="font-headline-lg text-headline-lg text-pure-white">Crescimento</h2>
+</div>
+<p class="font-body-md text-soft-mint mb-md h-12">Para expandir o alcance de forma inteligente.</p>
+<div class="flex items-baseline gap-xs mb-sm">
+<span class="font-headline-xl text-[64px] font-extrabold text-pure-white">R$ 89</span>
+<span class="font-body-md text-soft-mint font-bold">/mês</span>
+</div>
+</div>
+<div class="flex-grow mb-xl mt-md">
+<ul class="space-y-md">
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-action-emerald" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-pure-white font-semibold">Envios ilimitados</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-action-emerald" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-pure-white">Filtros inteligentes de público</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-action-emerald" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-pure-white">Suporte prioritário via WhatsApp</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-action-emerald" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-pure-white">Templates personalizados</span>
+</li>
+</ul>
+</div>
+<button class="w-full bg-action-emerald text-white hover:bg-soft-mint hover:text-deep-forest active:scale-95 transition-all py-4 rounded-xl font-label-lg text-label-lg font-bold shadow-lg uppercase tracking-wider">
+                        Assinar Crescimento
+                    </button>
+</div>
+<!-- Plano Escala -->
+<div class="bg-surface-container-lowest rounded-2xl p-xl shadow-xl hover:shadow-2xl transition-all flex flex-col border-4 border-outline-variant/30 hover:border-action-emerald/50">
+<div class="mb-md">
+<div class="flex items-center gap-sm mb-sm">
+<span class="material-symbols-outlined text-action-emerald text-3xl" data-icon="storefront">storefront</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Escala</h2>
+</div>
+<p class="font-body-md text-on-surface-variant mb-md h-12">Gestão completa e integrações para seu negócio.</p>
+<div class="flex items-baseline gap-xs mb-sm">
+<span class="font-headline-xl text-[56px] font-extrabold text-on-surface">R$ 199</span>
+<span class="font-body-md text-on-surface-variant font-bold">/mês</span>
+</div>
+</div>
+<div class="flex-grow mb-xl mt-md">
+<ul class="space-y-md">
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-action-emerald" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface font-semibold">Tudo do Plano Crescimento</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-action-emerald" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface">Módulo de Feedback completo</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-action-emerald" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface">Dashboards avançados</span>
+</li>
+<li class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-action-emerald" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-on-surface">API disponível para integração</span>
+</li>
+</ul>
+</div>
+<button class="w-full border-4 border-action-emerald text-action-emerald hover:bg-action-emerald hover:text-white active:scale-95 transition-all py-4 rounded-xl font-label-lg text-label-lg font-bold uppercase tracking-wider">
+                        Contatar Vendas
+                    </button>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="bg-inverse-surface text-pure-white py-[120px] px-gutter border-t border-outline-variant/30 relative overflow-hidden bg-geometric">
+<div class="absolute top-10 right-10 w-48 h-48 bg-primary rounded-full opacity-30 blur-2xl"></div>
+<div class="absolute bottom-10 left-10 w-64 h-64 bg-action-emerald rounded-full opacity-20 blur-3xl"></div>
+<div class="max-w-3xl mx-auto relative z-10">
+<h3 class="font-headline-xl text-headline-xl text-center mb-xl font-extrabold">Perguntas Frequentes</h3>
+<div class="space-y-md">
+<div class="bg-deep-forest/50 backdrop-blur-sm rounded-xl p-lg border border-soft-mint/20 shadow-lg">
+<h4 class="font-headline-md text-headline-md mb-sm text-soft-mint">Posso cancelar a qualquer momento?</h4>
+<p class="font-body-md text-body-md text-surface-variant">Sim, nossos planos são mensais e você pode cancelar a assinatura a qualquer momento, sem taxas ocultas.</p>
+</div>
+<div class="bg-deep-forest/50 backdrop-blur-sm rounded-xl p-lg border border-soft-mint/20 shadow-lg">
+<h4 class="font-headline-md text-headline-md mb-sm text-soft-mint">Preciso ter conhecimento técnico?</h4>
+<p class="font-body-md text-body-md text-surface-variant">Não! O Mércure Elo foi desenhado para ser simples e intuitivo, pensado especialmente para pequenos empreendedores.</p>
+</div>
+<div class="bg-deep-forest/50 backdrop-blur-sm rounded-xl p-lg border border-soft-mint/20 shadow-lg">
+<h4 class="font-headline-md text-headline-md mb-sm text-soft-mint">Como funciona o suporte?</h4>
+<p class="font-body-md text-body-md text-surface-variant">Dependendo do seu plano, oferecemos suporte via email ou atendimento prioritário pelo WhatsApp, sempre com foco em resolver sua dúvida rápido.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest full-width bottom-0 border-t border-outline-variant flat no shadows">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg px-lg py-xl max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2 lg:col-span-1">
+<div class="flex items-center gap-sm mb-sm opacity-80 hover:opacity-100 transition-opacity">
+<img alt="Mércure Elo Logo" class="h-6 w-6 object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzc-FTxMFblB3oYdaHdf8ssneJCNwU0NhY4LKL9J9TuT3qgN2z6gyGzJq43q6gXHyiAll2oim4qGkdEf0Nyw1y2grqzxSI5rFiN2ELOByNYW1cFRkfhVWYbYz1ZQgw2ugKuTFXQYQ4MKQC4w8fB3C85Js_cDgwRpmmT2Cftv45WRLdKYeO4LlAvIl67mouRUGV3UGOHo_ZbL8gw3d1DHdxBXSnKrmD2IYM-cGIcm2-XPH6KxYh_RG-Nvo9nIkn8eZZ"/>
+<span class="font-headline-md text-headline-md font-bold text-primary">Mércure Elo</span>
+</div>
+<p class="font-body-sm text-body-md text-secondary mt-sm">
+                    © 2024 Mércure Elo. Aproximando você dos seus clientes.
+                </p>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:underline decoration-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Funcionalidades</a>
+<a class="font-label-md text-label-md text-primary font-semibold hover:underline decoration-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Planos</a>
+</div>
+<div class="flex flex-col gap-sm">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:underline decoration-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Privacidade</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:underline decoration-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Termos de Uso</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary hover:underline decoration-primary opacity-80 hover:opacity-100 transition-opacity" href="#">Suporte</a>
+</div>
+</div>
+</footer>
+</body></html>

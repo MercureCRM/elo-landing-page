@@ -1,0 +1,516 @@
+<!DOCTYPE html><html lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Mércure Elo - Aproximando você dos seus clientes</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+                "outline-variant": "#bfc9c1",
+                "on-secondary": "#ffffff",
+                "primary-fixed-dim": "#95d4b3",
+                "tertiary-fixed-dim": "#b3cdb7",
+                "surface-container-low": "#d1fee5",
+                "surface-tint": "#2c694e",
+                "on-tertiary": "#ffffff",
+                "on-secondary-container": "#00734d",
+                "on-primary-container": "#a8e7c5",
+                "inverse-surface": "#0e3727",
+                "action-emerald": "#40916c",
+                "soft-mint": "#b7e4c7",
+                "secondary": "#006c48",
+                "surface-bright": "#e8fff0",
+                "on-tertiary-container": "#c6e1ca",
+                "on-error": "#ffffff",
+                "tertiary-container": "#4d6553",
+                "on-tertiary-fixed": "#092012",
+                "surface-container": "#ccf8df",
+                "deep-forest": "#081c15",
+                "pure-white": "#ffffff",
+                "secondary-fixed-dim": "#75daa8",
+                "on-secondary-fixed": "#002113",
+                "background": "#e8fff0",
+                "tertiary-fixed": "#cee9d3",
+                "on-surface": "#002114",
+                "on-background": "#002114",
+                "on-error-container": "#93000a",
+                "surface-container-high": "#c6f2da",
+                "error": "#ba1a1a",
+                "primary-fixed": "#b1f0ce",
+                "on-tertiary-fixed-variant": "#354c3b",
+                "on-primary-fixed": "#002114",
+                "on-secondary-fixed-variant": "#005235",
+                "surface-container-highest": "#c1ecd4",
+                "primary": "#0f5238",
+                "primary-container": "#2d6a4f",
+                "surface-container-lowest": "#ffffff",
+                "error-container": "#ffdad6",
+                "inverse-primary": "#95d4b3",
+                "surface": "#e8fff0",
+                "surface-variant": "#c1ecd4",
+                "tertiary": "#364d3c",
+                "secondary-container": "#92f7c3",
+                "inverse-on-surface": "#cffbe2",
+                "on-primary": "#ffffff",
+                "secondary-fixed": "#92f7c3",
+                "surface-dim": "#b8e4cc",
+                "outline": "#707973",
+                "on-primary-fixed-variant": "#0e5138",
+                "on-surface-variant": "#404943"
+        },
+        "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+        },
+        "spacing": {
+                "overlap-md": "-32px",
+                "unit": "8px",
+                "margin-desktop": "80px",
+                "section-gap": "120px",
+                "overlap-sm": "-16px",
+                "gutter": "32px"
+        },
+        "fontFamily": {
+                "label-md": [
+                        "Hanken Grotesk"
+                ],
+                "label-lg": [
+                        "Hanken Grotesk"
+                ],
+                "body-lg": [
+                        "Hanken Grotesk"
+                ],
+                "headline-xl-mobile": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-xl": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-md": [
+                        "Plus Jakarta Sans"
+                ],
+                "headline-lg": [
+                        "Plus Jakarta Sans"
+                ],
+                "body-md": [
+                        "Hanken Grotesk"
+                ]
+        },
+        "fontSize": {
+                "label-md": [
+                        "12px",
+                        {
+                                "lineHeight": "14px",
+                                "fontWeight": "600"
+                        }
+                ],
+                "label-lg": [
+                        "14px",
+                        {
+                                "lineHeight": "16px",
+                                "letterSpacing": "0.08em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-lg": [
+                        "18px",
+                        {
+                                "lineHeight": "28px",
+                                "fontWeight": "500"
+                        }
+                ],
+                "headline-xl-mobile": [
+                        "36px",
+                        {
+                                "lineHeight": "44px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "headline-xl": [
+                        "48px",
+                        {
+                                "lineHeight": "56px",
+                                "letterSpacing": "-0.03em",
+                                "fontWeight": "800"
+                        }
+                ],
+                "headline-md": [
+                        "24px",
+                        {
+                                "lineHeight": "32px",
+                                "fontWeight": "700"
+                        }
+                ],
+                "headline-lg": [
+                        "32px",
+                        {
+                                "lineHeight": "40px",
+                                "letterSpacing": "-0.02em",
+                                "fontWeight": "700"
+                        }
+                ],
+                "body-md": [
+                        "16px",
+                        {
+                                "lineHeight": "24px",
+                                "fontWeight": "400"
+                        }
+                ]
+        }
+},
+    },
+  }
+</script>
+<style>
+        /* Custom utilities based on style guide */
+        .glass-highlight {
+            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 100%);
+        }
+        .whatsapp-bg {
+            background-color: #F0EBE3; /* Soft cream from style guide, overriding config limitation for this specific branded component */
+            background-image: radial-gradient(rgba(45, 106, 79, 0.05) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        
+        .clip-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+        .clip-slant-reverse {
+            clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+        }
+        
+        /* Floating animations */
+        @keyframes float-slow {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(5deg); }
+        }
+        @keyframes float-medium {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(-5deg); }
+        }
+        @keyframes float-fast {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(8deg); }
+        }
+        .animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+        .animate-float-medium { animation: float-medium 4s ease-in-out infinite; }
+        .animate-float-fast { animation: float-fast 3s ease-in-out infinite; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased font-sans overflow-x-hidden">
+<!-- TopNavBar (Shared Component) -->
+<nav class="bg-primary-container/95 backdrop-blur-md full-width top-0 sticky z-50 border-b border-primary/20 shadow-sm transition-all duration-300" id="top-nav">
+<div class="flex justify-between items-center px-6 md:px-margin-desktop py-4 max-w-[1440px] mx-auto">
+<!-- Brand -->
+<a class="flex items-center gap-2 scale-95 active:scale-90 transition-transform" href="#">
+<img alt="Mércure Elo Logo" class="h-12 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfNq4zdaSY4GumZiMbdpYWhtY3sjOep5dY3EwxUYy-GQPecvf_Fxkhitoese-sLxy20v08FFsnGH32765ccZP-eZdHey8riLa5cpc-O7H1Sd2ZtBqerQWE3QuLS3TBgh3o7emYY_s8qOYOwlRD9gZnFktmXZFSSc3l74dmZVYbTTzniT4r64Xwea_i0YD0NGZBBxfersPom3mYmiwAzNk3A9vMS5ebzvjkaU9kqOvXHMlWBUQBwkQpA1gRy1DbQgkR">
+<span class="font-headline-md text-headline-md font-bold text-pure-white sr-only md:not-sr-only">Mércure Elo</span>
+</a>
+<!-- Navigation Links -->
+<ul class="hidden md:flex items-center gap-gutter">
+<li class=""><a class="hover:text-pure-white font-label-lg text-label-lg hover:bg-pure-white/10 transition-colors duration-200 px-3 py-2 rounded text-pure-white" href="#funcionalidades" data-stitch-orig-opacity="0">Funcionalidades</a></li>
+<li class=""><a class="hover:text-pure-white font-label-lg text-label-lg hover:bg-pure-white/10 transition-colors duration-200 px-3 py-2 rounded text-pure-white" href="#planos" data-stitch-orig-opacity="0">Funcionalidades</a></li>
+<li class=""><a class="hover:text-pure-white font-label-lg text-label-lg hover:bg-pure-white/10 transition-colors duration-200 px-3 py-2 rounded text-pure-white" href="#clientes" data-stitch-orig-opacity="0">Funcionalidades</a></li>
+</ul>
+<!-- Trailing Action -->
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-on-primary-container font-label-lg text-label-lg hover:bg-pure-white/10 px-4 py-2 rounded transition-colors duration-200">Entrar</button>
+<button class="bg-secondary-container text-on-secondary-container hover:bg-primary-fixed active:scale-95 transition-all duration-200 rounded-full px-6 py-2.5 font-label-lg text-label-lg shadow-lg hover:shadow-xl flex items-center gap-2" style="background-color: rgb(255, 255, 255); color: rgb(45, 106, 79);">
+                    Começar
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative pt-20 pb-40 px-6 overflow-hidden flex flex-col items-center justify-center text-center min-h-[90vh] bg-primary-container clip-slant z-10"><div class="absolute -left-20 top-1/4 w-[500px] h-[400px] bg-action-emerald/10 rounded-[4rem] rounded-bl-none -z-10 rotate-12"></div><div class="absolute -right-40 bottom-10 w-[600px] h-[500px] bg-secondary-container/10 rounded-[5rem] rounded-br-none -z-10 -rotate-6"></div>
+<!-- Floating Decorative Elements -->
+<span class="material-symbols-outlined text-[64px] text-action-emerald/20 absolute top-[15%] left-[10%] animate-float-slow -z-10" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<span class="material-symbols-outlined text-[80px] text-secondary-container/15 absolute bottom-[25%] left-[15%] animate-float-medium -z-10" style="font-variation-settings: 'FILL' 1;">forum</span>
+<span class="material-symbols-outlined text-[48px] text-primary-fixed/25 absolute top-[30%] right-[12%] animate-float-fast -z-10" style="font-variation-settings: 'FILL' 1;">mark_chat_read</span>
+<span class="material-symbols-outlined text-[96px] text-soft-mint/10 absolute bottom-[20%] right-[8%] animate-float-slow -z-10" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+
+
+<!-- Decorative Background Shapes -->
+
+
+
+
+<div class="max-w-[1000px] mx-auto flex flex-col items-center z-10 relative">
+<img alt="Mércure Elo Logo" class="h-[435px] w-auto mb-8 drop-shadow-2xl animate-pulse" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCSeOUylEWihmedRuN803ckgk2yVKauk7yljRnKPXvFQ7XfSNH4I4zwQJmkGcYEViccgcS5Llmh-w7Je60ArnrZwUv-Iy5B3HaIEwChuaDWZfKIckJ8IYKrb6Llkoc_ezSYBeqgpm-ZSUFBh0bq62bJrd9f-HyiH7eTTLGjc5-CDaPgYdtIUYrAieJ7amXrEKzPA0E4O1Q1bmm6NmjbiwqGW6boFsguhOrb_sDktuGlh6IDwIc-HjLxk0NSCyW3rE8">
+<div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-surface-container-lowest/10 border border-pure-white/20 text-on-primary-container font-label-lg text-label-lg mb-8 shadow-lg backdrop-blur-sm">
+<span class="material-symbols-outlined text-[20px] text-secondary-container">stars</span>
+                Feito para pequenos negócios e artesãos
+            </div>
+<h1 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-pure-white mb-8 leading-tight max-w-4xl drop-shadow-md">
+                Aproximando você dos seus clientes de forma <span class="text-secondary-container relative inline-block">fácil
+                    <svg class="absolute -bottom-3 left-0 w-full h-4 text-action-emerald opacity-80" preserveAspectRatio="none" viewBox="0 0 100 10"><path d="M0 5 Q 50 10 100 5" fill="transparent" stroke="currentColor" stroke-width="6"></path></svg>
+</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-12 max-w-3xl drop-shadow-sm">
+                Automatize sua comunicação no WhatsApp sem perder a essência. Ferramentas poderosas de gestão e engajamento que parecem artesanais.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+<button class="bg-secondary-container text-on-secondary-container hover:bg-primary-fixed active:scale-95 transition-all duration-300 rounded-full px-10 py-5 font-label-lg text-label-lg shadow-[0_10px_40px_rgba(146,247,195,0.3)] hover:shadow-[0_15px_50px_rgba(146,247,195,0.4)] flex items-center justify-center gap-3 w-full sm:w-auto text-lg">
+                    Começar Agora
+                    <span class="material-symbols-outlined text-[24px]">rocket_launch</span>
+</button>
+<button class="border-2 border-primary-fixed text-primary-fixed hover:bg-primary-fixed/10 active:scale-95 transition-all duration-300 rounded-full px-10 py-5 font-label-lg text-label-lg w-full sm:w-auto text-lg backdrop-blur-sm">
+                    Ver Demonstração
+                </button>
+</div>
+</div>
+</section>
+<!-- Funcionalidades Section (Bento Grid) -->
+<section class="py-section-gap px-6 bg-surface-container-lowest -mt-32 pt-48 relative z-0" id="funcionalidades">
+<!-- Floating Decorative Elements -->
+<span class="material-symbols-outlined text-[56px] text-secondary/10 absolute top-[10%] right-[5%] animate-float-medium -z-10" style="font-variation-settings: 'FILL' 1;">mark_chat_unread</span>
+<span class="material-symbols-outlined text-[72px] text-action-emerald/10 absolute top-[40%] left-[2%] animate-float-slow -z-10" style="font-variation-settings: 'FILL' 1;">bar_chart</span>
+<span class="material-symbols-outlined text-[40px] text-primary/10 absolute bottom-[20%] right-[10%] animate-float-fast -z-10" style="font-variation-settings: 'FILL' 1;">quick_replies</span>
+<div class="max-w-[1440px] mx-auto relative z-10">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-6">Poderoso por baixo, simples por cima</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">Tudo o que você precisa para gerenciar contatos, enviar campanhas e coletar feedback, organizado em uma interface amigável.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Card 1: Envio em Massa (Large) -->
+<div class="col-span-1 md:col-span-8 bg-surface-container-low rounded-[2rem] border-0 shadow-[0_20px_50px_rgba(45,106,79,0.15)] hover:shadow-[0_30px_60px_rgba(45,106,79,0.2)] transition-shadow duration-300 overflow-hidden flex flex-col relative group">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl -z-10 group-hover:bg-secondary-container/30 transition-colors"></div>
+<span class="material-symbols-outlined text-[120px] text-primary/5 absolute -bottom-10 -right-10 group-hover:scale-110 transition-transform duration-500" style="font-variation-settings: 'FILL' 1;">send</span>
+<div class="p-10 md:p-12 flex-1 relative z-10">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-2xl bg-primary-container flex items-center justify-center text-pure-white shadow-lg">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">send</span>
+</div>
+<h3 class="font-headline-lg text-headline-md text-on-surface">Envio em Massa Inteligente</h3>
+</div>
+<p class="font-body-lg text-body-md text-on-surface-variant mb-8 max-w-xl">
+                            Alcance todos os seus clientes com um clique. Crie listas segmentadas, agende mensagens e mantenha sua comunidade sempre atualizada sem esforço manual.
+                        </p>
+</div>
+<div class="bg-surface-variant/50 p-6 md:p-8 mt-auto relative h-80 overflow-hidden">
+<img alt="Interface de envio em massa inteligente" class="absolute inset-x-8 -bottom-8 w-[calc(100%-64px)] h-auto rounded-t-2xl shadow-2xl object-cover object-top border-4 border-surface-container-lowest transition-transform duration-500 group-hover:-translate-y-4" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQRDoGjiBjeMDdoxevZ2v6dxYvE-dVfRViJx9MJ4jF0fgtvSWRFWr8KKB93KUm7K3ep-HrgB7qFM8c0NPkCzz_z6FN31W-dDVphBK1D4QR9k05MX5fj849ZcN7M2oQF9Eidd57rWW302pl7Sq5Jgx_X6YYnXsX5NsZN1MIm2Ujw23nJ_hYYXTXTapki4-2ExLU2B4CPeQLDQlDI-lj9FTsMY8Rlrrng9fXk6Hy4NaDnhO_AAceAFeijOjwTdNk8II5">
+</div>
+</div>
+<!-- Card 2: Gestão de Clientes (Vertical) -->
+<div class="col-span-1 md:col-span-4 bg-primary text-pure-white rounded-[2rem] shadow-[0_20px_50px_rgba(15,82,56,0.3)] hover:shadow-[0_30px_60px_rgba(15,82,56,0.4)] transition-shadow duration-300 overflow-hidden flex flex-col relative group">
+<div class="absolute -bottom-20 -right-20 w-80 h-80 bg-primary-container rounded-full blur-3xl -z-10"></div>
+<span class="material-symbols-outlined text-[100px] text-pure-white/5 absolute top-10 right-10 group-hover:rotate-12 transition-transform duration-500" style="font-variation-settings: 'FILL' 1;">stacked_bar_chart</span>
+<div class="p-10 md:p-12 flex-1 relative z-10">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center text-primary shadow-lg">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<h3 class="font-headline-lg text-headline-md text-pure-white">Gestão de Clientes</h3>
+</div>
+<p class="font-body-lg text-body-md text-on-primary-container mb-8">
+                            Organize seus contatos de forma visual e intuitiva. Acompanhe o histórico de engajamento e crie conexões mais fortes.
+                        </p>
+</div>
+<div class="px-8 pt-8 mt-auto h-64 relative overflow-hidden bg-gradient-to-t from-deep-forest/50 to-transparent">
+<img alt="Painel de gestão de clientes" class="absolute inset-x-8 top-8 w-[calc(100%-64px)] h-auto rounded-t-2xl shadow-2xl border-4 border-primary-container object-cover object-top transition-transform duration-500 group-hover:-translate-y-2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaTBROgeGKAsoPiZhqSQwE3-StnWbSiSfpIR9H08RjShddrDHAYqjseK7PnEvLjs1sbPD3b0m8lV-ZKVYcYf9YtiX5dxU8Dc_CbBAFa-kMfHa1gNY6r3jRXq5YeTzf6fnLofp_dBwQYWEYaDubQWWxS1xptHuY9DXNQ7ITfy3ePYhDLpP3gbJqV7wYZf9P9S_jnDz1cqGDsBfy8_zLA1EGzLmlQgMhwNbycTrYbISLID2g-2MWkdoHpjiCtaJ5W7Aq">
+</div>
+</div>
+<!-- Card 3: QR Code -->
+<div class="col-span-1 md:col-span-12 bg-surface-container rounded-[2rem] shadow-[0_20px_50px_rgba(45,106,79,0.1)] hover:shadow-[0_30px_60px_rgba(45,106,79,0.15)] transition-shadow duration-300 p-10 md:p-16 flex flex-col md:flex-row items-center gap-16 relative overflow-hidden group">
+<div class="absolute right-0 top-0 w-96 h-96 bg-secondary-fixed/30 rounded-full blur-[100px] -z-10 translate-x-1/3 -translate-y-1/3"></div>
+<div class="absolute left-0 bottom-0 w-64 h-64 bg-primary-fixed/30 rounded-full blur-[80px] -z-10 -translate-x-1/2 translate-y-1/2"></div>
+<span class="material-symbols-outlined text-[150px] text-action-emerald/5 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 group-hover:scale-110 transition-transform duration-700" style="font-variation-settings: 'FILL' 1;">contact_phone</span>
+<div class="flex-1 relative z-10">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center text-pure-white shadow-lg">
+<span class="material-symbols-outlined text-[32px]" style="font-variation-settings: 'FILL' 1;">qr_code_scanner</span>
+</div>
+<h3 class="font-headline-xl text-headline-lg text-on-surface">Cadastro Instantâneo na Loja</h3>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-2xl">
+                            Transforme visitantes da sua loja física ou ateliê em contatos digitais em segundos. Basta o cliente escanear o QR Code para iniciar uma conversa automática no WhatsApp e entrar na sua lista.
+                        </p>
+<ul class="flex flex-col gap-4 font-body-lg text-body-md text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[24px] bg-secondary/10 rounded-full p-1">check_circle</span> Ideal para balcões e vitrines</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-secondary text-[24px] bg-secondary/10 rounded-full p-1">check_circle</span> Mensagem de boas-vindas customizável</li>
+</ul>
+</div>
+<!-- Decorative Mockup -->
+<div class="w-full md:w-1/3 flex justify-center relative z-10">
+<div class="absolute inset-0 bg-primary-container/20 rounded-full blur-[60px] -z-10"></div>
+<div class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-2xl border-2 border-outline-variant/30 flex flex-col items-center rotate-3 hover:rotate-0 transition-transform duration-500">
+<div class="w-full aspect-square bg-surface-container-high rounded-xl mb-6 flex items-center justify-center p-4">
+<span class="material-symbols-outlined text-[100px] text-primary drop-shadow-md">qr_code_2</span>
+</div>
+<p class="font-label-lg text-label-lg text-center text-on-surface-variant uppercase tracking-widest bg-surface-container px-4 py-2 rounded-full">Escaneie para novidades</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Differentiator Section (WhatsApp vs Forms) -->
+<section class="py-12 px-6 bg-primary-container text-pure-white relative overflow-hidden clip-slant-reverse mt-20 z-0"><span class="material-symbols-outlined text-[150px] text-pure-white/5 absolute -bottom-10 -right-20 animate-float-slow -z-10" style="font-variation-settings: &quot;FILL&quot; 1;">chat_bubble</span><span class="material-symbols-outlined text-[120px] text-secondary-container/10 absolute top-[10%] left-[15%] animate-float-medium -z-10" style="font-variation-settings: 'FILL' 1;">forum</span><div class="absolute -left-40 bottom-0 w-[800px] h-[600px] bg-pure-white/5 rounded-[8rem] rounded-bl-none -z-10 -rotate-12"></div><div class="absolute -left-20 top-1/4 w-[500px] h-[400px] bg-action-emerald/10 rounded-[4rem] rounded-bl-none -z-10 rotate-12"></div><div class="absolute -right-40 bottom-10 w-[600px] h-[500px] bg-secondary-container/10 rounded-[5rem] rounded-br-none -z-10 -rotate-6"></div>
+<div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+PGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMSIgZmlsbD0icmdiYSgyNTUsMjU1LDI1NSwwLjEpIi8+PC9zdmc+')] opacity-50"></div>
+<!-- Floating Decorative Elements -->
+<span class="material-symbols-outlined text-[80px] text-pure-white/10 absolute top-[20%] left-[5%] animate-float-medium -z-10" style="font-variation-settings: 'FILL' 1;">sms</span>
+<span class="material-symbols-outlined text-[64px] text-secondary-container/20 absolute bottom-[15%] left-[40%] animate-float-slow -z-10" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<span class="material-symbols-outlined text-[96px] text-primary-fixed/15 absolute top-[30%] right-[5%] animate-float-fast -z-10" style="font-variation-settings: 'FILL' 1;">support_agent</span>
+
+
+<div class="max-w-[1440px] mx-auto relative z-10 pt-32 pb-20">
+<div class="text-center mb-24">
+<h2 class="font-headline-xl text-headline-xl text-pure-white mb-6 drop-shadow-md">Onde seus clientes realmente estão</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container max-w-3xl mx-auto text-lg">Esqueça os formulários longos que ninguém responde. Leve suas pesquisas para o ambiente mais natural e conversacional.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<!-- Google Forms Mockup (The Old Way) -->
+<div class="rounded-[2rem] border border-pure-white/10 p-12 flex flex-col items-center filter grayscale-[50%] transform -rotate-2 hover:rotate-0 transition-transform duration-500 bg-surface-variant/50"><h3 class="font-label-lg text-label-lg text-on-surface-variant/60 uppercase tracking-widest mb-10 text-center flex items-center gap-3">
+<span class="material-symbols-outlined">description</span> Formulários Tradicionais
+                    </h3>
+<div class="w-full max-w-md bg-surface-container-high/50 rounded-xl shadow-lg border border-outline-variant/30 p-8 flex flex-col gap-8 opacity-60">
+<div class="h-10 bg-outline-variant/30 rounded-lg w-3/4 mb-4" style="background-color: #673ab7; opacity: 0.4;"></div>
+<div class="flex flex-col gap-3">
+<div class="h-5 bg-outline-variant/20 rounded w-1/2"></div>
+<div class="h-12 bg-surface-dim rounded-lg border border-outline-variant/50 w-full"></div>
+</div>
+<div class="flex flex-col gap-3">
+<div class="h-5 bg-outline-variant/20 rounded w-2/3"></div>
+<div class="flex items-center gap-3"><div class="w-5 h-5 rounded-full border-2 border-outline-variant/50"></div><div class="h-5 bg-outline-variant/20 rounded w-1/4"></div></div>
+<div class="flex items-center gap-3"><div class="w-5 h-5 rounded-full border-2 border-outline-variant/50"></div><div class="h-5 bg-outline-variant/20 rounded w-1/3"></div></div>
+</div>
+<div class="h-12 bg-outline-variant/40 rounded-lg w-1/3 mt-6 self-start"></div>
+</div>
+<p class="mt-10 font-body-lg text-body-md text-on-surface-variant/70 text-center max-w-sm">Frio, impessoal e com baixa taxa de conversão.</p></div>
+<!-- WhatsApp Mockup (The New Way) -->
+<div class="whatsapp-bg rounded-[2rem] border-[8px] border-surface-container-lowest shadow-[0_30px_80px_rgba(0,0,0,0.3)] p-8 md:p-12 flex flex-col items-center relative overflow-hidden transform rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-500 z-20">
+<!-- Glass highlight -->
+<div class="absolute inset-0 glass-highlight pointer-events-none"></div>
+<h3 class="font-label-lg text-label-lg text-primary uppercase tracking-widest mb-10 text-center flex items-center gap-3 relative z-10 font-bold bg-pure-white/80 px-6 py-2 rounded-full backdrop-blur-md shadow-sm">
+<span class="material-symbols-outlined text-[24px]" style="font-variation-settings: 'FILL' 1;">forum</span> Mércure Elo Feedback
+                    </h3>
+<div class="w-full max-w-md bg-surface-container-lowest/90 backdrop-blur-xl rounded-3xl shadow-2xl border border-outline-variant/20 p-5 flex flex-col gap-5 relative z-10 h-[500px]">
+<!-- Header -->
+<div class="flex items-center gap-4 border-b border-outline-variant/20 pb-4">
+<div class="w-12 h-12 rounded-full bg-primary text-pure-white flex items-center justify-center font-bold text-lg shadow-md">ME</div>
+<div>
+<div class="font-label-lg text-body-lg text-on-surface font-bold">Meu Ateliê</div>
+<div class="font-label-md text-label-md text-primary">Conta Comercial</div>
+</div>
+</div>
+<!-- Chat Area -->
+<div class="flex flex-col gap-5 flex-1 overflow-y-auto pt-4">
+<!-- Received Bubble -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-[20px] rounded-tl-sm p-4 max-w-[85%] self-start shadow-md">
+<p class="font-body-lg text-body-md text-on-surface">Olá! Temos algumas perguntas rápidas sobre sua última compra. Podemos começar?</p>
+<div class="text-xs text-on-surface-variant text-right mt-2 font-medium">11:13</div>
+</div>
+<!-- Sent Bubble -->
+<div class="bg-secondary-container/50 border border-secondary/20 rounded-[20px] rounded-tr-sm p-4 max-w-[85%] self-end shadow-md">
+<p class="font-body-lg text-body-md text-on-surface font-medium">Claro! Vamos lá.</p>
+<div class="text-xs text-on-surface-variant text-right mt-2 flex items-center justify-end gap-1 font-medium">11:14 <span class="material-symbols-outlined text-[16px] text-secondary">done_all</span></div>
+</div>
+<!-- Received Bubble -->
+<div class="bg-surface-container-lowest border border-outline-variant/20 rounded-[20px] rounded-tl-sm p-4 max-w-[85%] self-start shadow-md">
+<p class="font-body-lg text-body-md text-on-surface">Como você avalia a qualidade do acabamento do produto? (1 a 5)</p>
+<div class="flex gap-3 mt-4"><button class="bg-[#e7fce3] text-[#075e54] border border-[#25d366]/30 px-4 py-2 rounded-lg text-sm font-bold shadow-sm hover:bg-[#25d366]/10 transition-colors">1</button><button class="bg-[#e7fce3] text-[#075e54] border border-[#25d366]/30 px-4 py-2 rounded-lg text-sm font-bold shadow-sm">...</button><button class="bg-[#25d366] text-white px-4 py-2 rounded-lg text-sm font-bold shadow-md hover:bg-[#128c7e] transition-colors">5</button></div>
+<div class="text-xs text-on-surface-variant text-right mt-2 font-medium">11:14</div>
+</div>
+</div>
+</div>
+<p class="mt-8 font-body-lg text-body-lg text-primary text-center max-w-sm relative z-10 font-bold bg-pure-white/80 px-6 py-3 rounded-2xl shadow-sm backdrop-blur-md">Interativo, familiar e com taxas de resposta até 4x maiores.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Dashboard Showcase Section -->
+<section class="py-section-gap px-6 bg-surface relative z-0 overflow-hidden"><span class="material-symbols-outlined text-[180px] text-primary/5 absolute -left-20 top-1/4 animate-float-slow -z-10" style="font-variation-settings: &quot;FILL&quot; 1;">chat_bubble</span><span class="material-symbols-outlined text-[140px] text-action-emerald/5 absolute -right-10 bottom-1/3 animate-float-medium -z-10" style="font-variation-settings: 'FILL' 1;">sms</span><div class="absolute -right-20 top-1/3 w-[700px] h-[600px] bg-primary/5 rounded-[6rem] rounded-tr-none -z-10 rotate-3"></div>
+<div class="absolute top-0 right-0 w-[800px] h-[800px] bg-secondary-container/10 rounded-full blur-[120px] -z-10"></div>
+<!-- Floating Decorative Elements -->
+<span class="material-symbols-outlined text-[80px] text-secondary/10 absolute top-[15%] left-[8%] animate-float-medium -z-10" style="font-variation-settings: 'FILL' 1;">insights</span>
+<span class="material-symbols-outlined text-[64px] text-action-emerald/10 absolute bottom-[25%] right-[5%] animate-float-slow -z-10" style="font-variation-settings: 'FILL' 1;">add_comment</span>
+
+
+
+<div class="max-w-[1440px] mx-auto relative z-10">
+<div class="text-center mb-20">
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-6">Controle total em suas mãos</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-3xl mx-auto">Um painel limpo e direto ao ponto, projetado para que você foque no seu negócio, não em aprender a usar a ferramenta.</p>
+</div>
+<div class="relative mx-auto max-w-[1200px]">
+<!-- Decorative background elements -->
+<div class="absolute -inset-8 bg-gradient-to-br from-primary/20 via-secondary-container/20 to-primary/10 rounded-[3rem] blur-2xl -z-10"></div>
+<!-- Browser Window Mockup -->
+<div class="bg-surface-container-lowest rounded-[2rem] shadow-[0_40px_100px_rgba(15,82,56,0.2)] border border-outline-variant/30 overflow-hidden flex flex-col transform hover:-translate-y-2 transition-transform duration-500">
+<!-- Browser Header -->
+<div class="bg-surface-container-high px-6 py-4 flex items-center gap-4 border-b border-outline-variant/30">
+<div class="flex gap-2.5">
+<div class="w-4 h-4 rounded-full bg-error/90 shadow-inner"></div>
+<div class="w-4 h-4 rounded-full bg-[#F5B041]/90 shadow-inner"></div>
+<div class="w-4 h-4 rounded-full bg-action-emerald/90 shadow-inner"></div>
+</div>
+<div class="mx-auto bg-surface-container-lowest px-8 py-2 rounded-full text-sm text-on-surface-variant font-mono flex items-center gap-3 border border-outline-variant/30 shadow-sm w-full max-w-xl justify-center font-bold"><span class="material-symbols-outlined text-[18px]">lock</span> mercure-elo.com</div>
+<div class="w-16"></div> <!-- Spacer for balance -->
+</div>
+<!-- Browser Content -->
+<div class="relative bg-surface p-0">
+<img alt="Painel principal do Mércure Elo" class="w-full h-auto object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1yDBJ5vTGgzSlXCsQdHPFMdwzNzcuH4Ytkld6IfLPbH12GQUBStUu97xlCmSYFqRFFLLyE94z2IJgUWwsvPemI_8zntSRQ4h7tRirsEl9-XB73FnJSVgvisbvtORUv4JQqeh2VnzGTtJmqTDifk5xpsXYyHpcV5gf3ZjShgZPqpKVzApcFDAjFKHdQBs7BBgHctpCFwSiTpJ8ajU0rFAWrC5dnSL_MGOfQ_lLew7xVAyt3HmND7cZrgP861DbNdmR">
+</div>
+</div>
+</div>
+<div class="mt-24 text-center">
+<button class="bg-primary text-pure-white hover:bg-primary-container active:scale-95 transition-all duration-300 rounded-full px-12 py-6 font-headline-md text-headline-md shadow-[0_15px_40px_rgba(15,82,56,0.3)] hover:shadow-[0_20px_50px_rgba(15,82,56,0.4)] inline-flex items-center justify-center gap-4">
+                    Criar Minha Primeira Campanha
+                    <span class="material-symbols-outlined text-[32px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component) -->
+<footer class="bg-deep-forest text-pure-white full-width bottom-0 border-t-8 border-secondary-container relative overflow-hidden">
+<span class="material-symbols-outlined text-[120px] text-pure-white/5 absolute bottom-10 right-10 -rotate-12 pointer-events-none" style="font-variation-settings: 'FILL' 1;">chat_bubble</span>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 px-6 py-20 max-w-[1440px] mx-auto relative z-10">
+<!-- Brand Column -->
+<div class="flex flex-col gap-6">
+<a class="flex items-center gap-3" href="#">
+<img alt="Mércure Elo Logo" class="h-10 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDIkdIeFtpZbQPM9rKMhQwFCoo_dZYgUYzrtyApdBbhNYPCR4E9eI26eUW6BBf3wPZMjXRyDgvwzXI5XIE_tlsx9n6jHesKTpkSXJbrTXR_ZsR4ws8DaW4zJH0yHM1xwC9zPiB-ynGIpnnnkI1HsVd1DDwER9mWK7OLQC9Dp17xRRcQYD5MFLltP_6vCzE9D2vD6CP6fr2nNPoL0RmyrELC8Z0rD9wAAKyCpEpt4ihBQ8ptZxDFgLmkle1JVgVZ7bt6">
+<span class="font-headline-md text-headline-md font-bold text-pure-white">Mércure Elo</span>
+</a>
+<p class="font-body-lg text-body-md text-on-primary-container max-w-xs">
+                    © 2024 Mércure Elo. Aproximando você dos seus clientes.
+                </p>
+</div>
+<!-- Links Column 1 -->
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-body-lg text-pure-white font-bold mb-4">Produto</h4>
+<a class="font-body-lg text-body-md text-on-primary-container hover:text-secondary-container transition-colors" href="#">Funcionalidades</a>
+<a class="font-body-lg text-body-md text-on-primary-container hover:text-secondary-container transition-colors" href="#">Planos</a>
+</div>
+<!-- Links Column 2 -->
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-body-lg text-pure-white font-bold mb-4">Legal</h4>
+<a class="font-body-lg text-body-md text-on-primary-container hover:text-secondary-container transition-colors" href="#">Privacidade</a>
+<a class="font-body-lg text-body-md text-on-primary-container hover:text-secondary-container transition-colors" href="#">Termos de Uso</a>
+</div>
+<!-- Links Column 3 -->
+<div class="flex flex-col gap-4">
+<h4 class="font-headline-md text-body-lg text-pure-white font-bold mb-4">Contato</h4>
+<a class="font-body-lg text-body-md text-on-primary-container hover:text-secondary-container transition-colors" href="#">Suporte</a>
+</div>
+</div>
+</footer>
+
+
+
+
+</body></html>
