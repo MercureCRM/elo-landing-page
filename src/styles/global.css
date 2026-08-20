@@ -1,1 +1,157 @@
+/* src/styles/global.css */
 @import "tailwindcss";
+
+@theme {
+  /* Cores */
+  --color-outline-variant: #bfc9c1;
+  --color-on-secondary: #ffffff;
+  --color-primary-fixed-dim: #95d4b3;
+  --color-tertiary-fixed-dim: #b3cdb7;
+  --color-surface-container-low: #d1fee5;
+  --color-surface-tint: #2c694e;
+  --color-on-tertiary: #ffffff;
+  --color-on-secondary-container: #00734d;
+  --color-on-primary-container: #a8e7c5;
+  --color-inverse-surface: #0e3727;
+  --color-action-emerald: #40916c;
+  --color-soft-mint: #b7e4c7;
+  --color-secondary: #006c48;
+  --color-surface-bright: #e8fff0;
+  --color-on-tertiary-container: #c6e1ca;
+  --color-on-error: #ffffff;
+  --color-tertiary-container: #4d6553;
+  --color-on-tertiary-fixed: #092012;
+  --color-surface-container: #ccf8df;
+  --color-deep-forest: #081c15;
+  --color-pure-white: #ffffff;
+  --color-secondary-fixed-dim: #75daa8;
+  --color-on-secondary-fixed: #002113;
+  --color-background: #e8fff0;
+  --color-tertiary-fixed: #cee9d3;
+  --color-on-surface: #002114;
+  --color-on-background: #002114;
+  --color-on-error-container: #93000a;
+  --color-surface-container-high: #c6f2da;
+  --color-error: #ba1a1a;
+  --color-primary-fixed: #b1f0ce;
+  --color-on-tertiary-fixed-variant: #354c3b;
+  --color-on-primary-fixed: #002114;
+  --color-on-secondary-fixed-variant: #005235;
+  --color-surface-container-highest: #c1ecd4;
+  --color-primary: #0f5238;
+  --color-primary-container: #2d6a4f;
+  --color-surface-container-lowest: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-inverse-primary: #95d4b3;
+  --color-surface: #e8fff0;
+  --color-surface-variant: #c1ecd4;
+  --color-tertiary: #364d3c;
+  --color-secondary-container: #92f7c3;
+  --color-inverse-on-surface: #cffbe2;
+  --color-on-primary: #ffffff;
+  --color-secondary-fixed: #92f7c3;
+  --color-surface-dim: #b8e4cc;
+  --color-outline: #707973;
+  --color-on-primary-fixed-variant: #0e5138;
+  --color-on-surface-variant: #404943;
+
+  /* Border Radius */
+  --radius-DEFAULT: 0.125rem;
+  --radius-lg: 0.25rem;
+  --radius-xl: 0.5rem;
+  --radius-full: 0.75rem;
+
+  /* Espaçamento */
+  --spacing-overlap-md: -32px;
+  --spacing-unit: 8px;
+  --spacing-margin-desktop: 80px;
+  --spacing-section-gap: 120px;
+  --spacing-overlap-sm: -16px;
+  --spacing-gutter: 32px;
+
+  /* Fontes */
+  --font-label-md: "Hanken Grotesk", sans-serif;
+  --font-label-lg: "Hanken Grotesk", sans-serif;
+  --font-body-lg: "Hanken Grotesk", sans-serif;
+  --font-headline-xl-mobile: "Plus Jakarta Sans", sans-serif;
+  --font-headline-xl: "Plus Jakarta Sans", sans-serif;
+  --font-headline-md: "Plus Jakarta Sans", sans-serif;
+  --font-headline-lg: "Plus Jakarta Sans", sans-serif;
+  --font-body-md: "Hanken Grotesk", sans-serif;
+
+  /* Tamanhos de texto */
+  --text-label-md: 12px;
+  --text-label-md--line-height: 14px;
+  --text-label-md--font-weight: 600;
+
+  --text-label-lg: 14px;
+  --text-label-lg--line-height: 16px;
+  --text-label-lg--letter-spacing: 0.08em;
+  --text-label-lg--font-weight: 700;
+
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 28px;
+  --text-body-lg--font-weight: 500;
+
+  --text-headline-xl-mobile: 36px;
+  --text-headline-xl-mobile--line-height: 44px;
+  --text-headline-xl-mobile--letter-spacing: -0.02em;
+  --text-headline-xl-mobile--font-weight: 800;
+
+  --text-headline-xl: 48px;
+  --text-headline-xl--line-height: 56px;
+  --text-headline-xl--letter-spacing: -0.03em;
+  --text-headline-xl--font-weight: 800;
+
+  --text-headline-md: 24px;
+  --text-headline-md--line-height: 32px;
+  --text-headline-md--font-weight: 700;
+
+  --text-headline-lg: 32px;
+  --text-headline-lg--line-height: 40px;
+  --text-headline-lg--letter-spacing: -0.02em;
+  --text-headline-lg--font-weight: 700;
+
+  --text-body-md: 16px;
+  --text-body-md--line-height: 24px;
+  --text-body-md--font-weight: 400;
+}
+
+/* Classes customizadas */
+.glass-highlight {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.whatsapp-bg {
+  background-color: #F0EBE3;
+  background-image: radial-gradient(rgba(45, 106, 79, 0.05) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.clip-slant {
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+.clip-slant-reverse {
+  clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+}
+
+/* Animações de flutuação */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-15px) rotate(-5deg); }
+}
+
+@keyframes float-fast {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(8deg); }
+}
+
+.animate-float-slow { animation: float-slow 6s ease-in-out infinite; }
+.animate-float-medium { animation: float-medium 4s ease-in-out infinite; }
+.animate-float-fast { animation: float-fast 3s ease-in-out infinite; }
